@@ -18,6 +18,6 @@ public class ArrayTests {
     int[] input1 = { };
     assertArrayEquals(new int[]{ }, ArrayExamples.reversed(input1));
     int[] input2 = {0, 1, 2, 3, 4};
-    assertArrayEquals(new int[]{4, 3, 2, 1, 0}, input2);
+    assertArrayEquals(new int[]{4, 3, 2, 1, 0}, ArrayExamples.reversed(input2));
   }
 }
