@@ -28,4 +28,6 @@ public class ArrayTests {
     ArrayExamples.averageWithoutLowest(input1);
     assertEquals(10.0, input1);
   }
+
+  
 }
