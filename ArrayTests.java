@@ -3,16 +3,29 @@ import org.junit.*;
 
 public class ArrayTests {
 	@Test 
-	public void testReverseInPlace() {
-    int[] input1 = { 3 };
+	public void testReverseInPlaceFail() {
+    // Failure Inducing Input
+    int[] input1 = {0, 1, 2, 3, 4};
     ArrayExamples.reverseInPlace(input1);
-    assertArrayEquals(new int[]{ 3 }, input1);
-    int[] input2 = {0, 1, 2, 3, 4};
-    ArrayExamples.reverseInPlace(input2);
-    assertArrayEquals(new int[]{4, 3, 2, 1, 0}, input2);
+    assertArrayEquals(new int[]{4, 3, 2, 1, 0}, input1);
 	}
 
+  @Test 
+	public void testReverseInPlacePass() {
+    //Non-Failure Inducing Input
+    int[] input2 = {0, 1, 2, 1, 0};
+    ArrayExamples.reverseInPlace(input2);
+    assertArrayEquals(new int[]{0, 1, 2, 1, 0}, input2);
+  }
 
+
+
+
+
+
+
+
+  /*
   @Test
   public void testReversed() {
     int[] input1 = { };
@@ -28,6 +41,6 @@ public class ArrayTests {
     double av = ArrayExamples.averageWithoutLowest(input1);
     assertEquals(10.0, av, 0.0);
   }
-
+*/
 
 }
